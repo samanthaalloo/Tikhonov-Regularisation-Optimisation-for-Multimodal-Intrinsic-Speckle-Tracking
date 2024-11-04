@@ -356,7 +356,7 @@ def EpsilonOpt_IterativeAlgorithm_MSE(epsilon_initial, phase_TIE, kr2, ftimage):
             break  # Stop if MSE starts increasing
 
         # 4) Update epsilon by multiplying by 10 for the next iteration
-        epsilon_initial *= 10
+        epsilon_initial *= 5
         iteration += 1
 
         ep_value.append(epsilon_initial)
