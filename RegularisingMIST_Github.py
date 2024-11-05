@@ -356,7 +356,8 @@ def EpsilonOpt_IterativeAlgorithm_MSE(epsilon_initial, phase_TIE, kr2, ftimage):
             break  # Stop if MSE starts increasing
 
         # 4) Update epsilon by multiplying by 10 for the next iteration
-        epsilon_initial *= 5
+        epsilon_initial *= 5 # !! NOTE !! If the algorithm stops after the fist fine-tuning iteration, it means that this step is too large 
+            # and the minimum has been overstep. To fix this, simply change this to 2.
         iteration += 1
 
         ep_value.append(epsilon_initial)
